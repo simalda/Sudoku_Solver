@@ -1,5 +1,6 @@
 import random
 import math
+from Cell import *
 
 class Backtraking(object):
     def __init__(self, board =[], pathStuck = [], been = [], S = [], solution = []):
@@ -117,7 +118,7 @@ class Backtraking(object):
         self.backForNumber(num)
         i, j = self.findEmptyCell()
         self.S = self.countSforCell(i, j)
-        print(self.S)
+        #print(self.S)
         nextMove = self.S[random.randrange(0, len(self.S), 1)]
 
         while self.board[8][8] == '' or self.board[8][7] == '':
@@ -126,7 +127,7 @@ class Backtraking(object):
                 self.pathStuck.append((i,j,nextMove))
                 a = M((i, j, nextMove), self.S)
                 self.been.append(a)
-                print(self.pathStuck)
+                #print(self.pathStuck)
                 i, j = self.findEmptyCell()
                 self.S = self.countSforCell(i, j)
 
@@ -137,40 +138,40 @@ class Backtraking(object):
                     self.been[-1].optionsForCell.remove(self.been[-1].cell[2])
                     self.S = self.been[-1].optionsForCell
                     self.been.pop(-1)
-                    print(self.pathStuck)
-                    print(self.S)
+                    #print(self.pathStuck)
+                    #print(self.S)
 
                 i, j = self.findEmptyCell()
                 print(self.pathStuck)
             print(self.S)
             if len(self.S) > 0:
                 nextMove = self.S[random.randrange(0, len(self.S), 1)]
+        self.solution = self.configBoard(self.board)
+
+        if level =='Easy':
+            self.SetLevel(1)
+        if level =='Medium':
+            self.SetLevel(4)
+        if level =='Hard':
+            self.SetLevel(6)
+
+    def configBoard(self, board):#?????
+        confiBoard=[]
         for i in range(9):
             x = []
             for j in range(9):
-                x.append([self.board[i][j], "black"])
-            self.solution.append(x)
-        if level =='easy':
-            for i in range(9):
-                rowToClear = [1,2,3,4,5,6,7,8,9]
-                for k in range(3):
-                    j = random.randrange(0, len(rowToClear), 1)
-                    self.board[i][j] = 0
-                    rowToClear.remove(rowToClear[j])
-        if level =='medium':
-            for i in range(9):
-                rowToClear = [1,2,3,4,5,6,7,8,9]
-                for k in range(4):
-                    j = random.randrange(0, len(rowToClear), 1)
-                    self.board[i][j] = 0
-                    rowToClear.remove(rowToClear[j])
-        if level =='hard':
-            for i in range(9):
-                rowToClear = [1,2,3,4,5,6,7,8,9]
-                for k in range(5):
-                    j = random.randrange(0, len(rowToClear), 1)
-                    self.board[i][j] = 0
-                    rowToClear.remove(rowToClear[j])
+                x.append(Cell(self.board[i][j], "predefined"))
+            confiBoard.append(x)
+        return confiBoard
+
+    def SetLevel(self,numofEmptycells):
+        for i in range(9):
+            rowToClear = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            for k in range(numofEmptycells):
+                j = random.randrange(0, len(rowToClear), 1)
+                self.board[i][j] = 0
+                rowToClear.remove(rowToClear[j])
+        self.board = self.configBoard(self.board)
 
 
 class M(object):

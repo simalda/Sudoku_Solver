@@ -1,26 +1,34 @@
 from Backtraking import Backtraking
+from Cell import Cell
 
- 
-    """
-    Sudoku Board representation
-    """
-    def __init__(self, level, board_file='', solution =[]):
+import json
+
+class SudokuBoard(object):
+    def __init__(self, level, board_file='', solution =[],board = []):
         self.solution = solution
-        if board_file!='':
-            self.board = self.__load_board(board_file)
-        else:
-            self.board, self.solution = self.__create_board(level)
+        self.board = board
+        #if board_file!='':
+           # self.__load_board(board_file)
+        #else:
+        self.board, self.solution = self.__create_board(level)
 
-        #init self.board using __create_board function
+
     def __create_board(self, level):
         b =  Backtraking()
         b.sudokuSolver(level)
+        print('sudoku BOARD from BOARD')
+        print(b.board)
+        print('solution  ',b.solution)
         return b.board, b.solution
 
     def __load_board(self, board_file):
-        board = []
         f = open(board_file, "r+")
         for i in range(9):
-            board.append(list(f.readline().strip('\n')))
+            self.board.append(list(f.readline().strip('\n')))
+        for i in range(11,19):
+            self.solution.append(list(f.readline().strip('\n')))
         f.close()
-        return board
+        #return self.board, self.solution
+
+
+

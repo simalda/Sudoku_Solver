@@ -10,6 +10,25 @@ class TestSudoku(unittest.TestCase):
     # def test__(self):
     #   self.assertEqual('foo'.upper(), 'FOO')
 
+    def test_check_ClearAnswers(self):
+        pass
+
+
+    def test_check_put2numbersinCellOneafterAnoher(self):
+        pass
+
+
+    def test_check_showSolution(self):
+        pass
+
+
+    def test_check_save(self):
+        pass
+
+
+    def test_check_load(self):
+        pass
+
     def test__check_winIncorrect(self):
         gameBoard = SudokuGame("SudokuBoard.txt")
         puzzle = []
@@ -42,6 +61,7 @@ class TestSudoku(unittest.TestCase):
         self.assertRaises(TypeError,gameBoard.check_win(puzzle))
     # def test__key_pressed(self):
     # self.assertRaises(ValueError,,'h'):
+
 
 
 if __name__ == '__main__':

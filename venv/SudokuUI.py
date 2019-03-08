@@ -30,7 +30,8 @@ class SudokuUI(Frame):
 
     def SetGame(self, myGame):
         self.game = myGame
-        self.game.start()
+        if self.game.RealPuzzle == []:
+            self.game.start()
         self.__initUI()
 
     def SetBoard(self):
@@ -46,28 +47,22 @@ class SudokuUI(Frame):
         self.buttonS = Button(self, text="Draw Solution", command = self.__draw_mavoh)
         self.buttonS.pack()
 
-
-    
     def __draw_any_puzzle(self, puzzle):
         self.canvas.delete("numbers")
-        if type(puzzle) is  list:
+        if type(puzzle) is list:
             for i in range(9):
                 for j in range(9):
-                    if puzzle[i][j][0] == 0:
-                        self.canvas.create_text(MARGIN + SIDE / 2 + SIDE * j, MARGIN + SIDE / 2 + SIDE * i,
-                                                tags="numbers", fill="black")
+                    if puzzle[i][j].value == 0:
+                        self.__drawNumberinCell(i, j, '', self.ConvertToColor('incorrect'))
                     else:
-                        self.canvas.create_text(MARGIN + SIDE / 2 + SIDE * j, MARGIN + SIDE / 2 + SIDE * i,
-                                                text=puzzle[i][j][0], tags="numbers", fill = puzzle[i][j][1])
-        else :
+                            self.__drawNumberinCell(i, j, puzzle[i][j].value, self.ConvertToColor( puzzle[i][j].cellState))
+        else:
             for i in range(9):
                 for j in range(9):
-                    if puzzle.board[i][j][0] == 0:
-                        self.canvas.create_text(MARGIN + SIDE / 2 + SIDE * j, MARGIN + SIDE / 2 + SIDE * i,
-                                                tags="numbers", fill="black")
+                    if puzzle.board[i][j].value == 0:
+                        self.__drawNumberinCell(i, j, '',self.ConvertToColor('incorrect'))
                     else:
-                        self.canvas.create_text(MARGIN + SIDE / 2 + SIDE * j, MARGIN + SIDE / 2 + SIDE * i,
-                                                text=puzzle.board[i][j][0], tags="numbers", fill = "black")
+                        self.__drawNumberinCell(i, j, puzzle.board[i][j].value, self.ConvertToColor('incorrect'))
 
     def __draw_mavoh(self):
         self.canvas.delete("numbers")
@@ -83,10 +78,13 @@ class SudokuUI(Frame):
     def clear_answers(self):
         print(self.game.start_puzzle)
         self.__draw_any_puzzle(self.game.start_puzzleForGame)
-        self.game.RealPuzzle = self.game.start_puzzleForGame
-    def show_solution(self):
-        self.__draw_any_puzzle(self.game.start_puzzle.solution)
         #self.game.RealPuzzle = self.game.start_puzzleForGame
+        self.game.RealPuzzle = self.game.duplicate2(self.game.start_puzzleForGame)
+
+    def show_solution(self):
+        self.__draw_any_puzzle(self.game.solution)
+        #  for child in self.winfo_children():
+        #   child.configure(state='disable')
     def __draw_grid(self):
          for i in range(10):
              if i%3 ==0:
@@ -125,8 +123,8 @@ class SudokuUI(Frame):
         print(event)
         print(self.game.start_puzzle.board[self.row-1][self.column-1])
         if  self.game.start_puzzle.board[self.row-1][self.column-1] == 0:
-            self.game.RealPuzzle[self.row-1][self.column-1][0] = event.char
-            self.game.RealPuzzle[self.row - 1][self.column - 1][1] = "green"
+            self.game.RealPuzzle[self.row-1][self.column-1].value = event.char
+            self.game.RealPuzzle[self.row - 1][self.column - 1].cellState = "correct"
             self.game.check_move(self.row, self.column, event.char)
             self.__draw_any_puzzle(self.game.RealPuzzle)
             print(self.game.check_win(self.game.RealPuzzle))
@@ -135,9 +133,9 @@ class SudokuUI(Frame):
 
     def SetNumber(self, number):
         #print(self.game.start_puzzle.board[self.row-1][self.column-1])
-        if  self.game.start_puzzleForGame[self.row-1][self.column-1][0] == 0 :
-            self.game.RealPuzzle[self.row-1][self.column-1][0] = number
-            self.game.RealPuzzle[self.row - 1][self.column - 1][1] = "green"
+        if  self.game.start_puzzleForGame[self.row-1][self.column-1].value == 0 :
+            self.game.RealPuzzle[self.row-1][self.column-1].value = number
+            self.game.RealPuzzle[self.row - 1][self.column - 1].cellState = "correct"
             self.game.check_board()
             self.game.check_move(self.row, self.column, number)
             self.__draw_any_puzzle(self.game.RealPuzzle)
@@ -146,8 +144,17 @@ class SudokuUI(Frame):
                 self.__draw_victory()
 
     def __draw_victory(self):
-        self.canvas.create_oval(100, 100, 440, 440, outline="red", fill="green", width=2)
-        self.canvas.create_text(239, 230, text="WIN", font=("Purisa", 86), fill="black")
+        self.win = Toplevel(bg="beige")
+        #self.win.wm_title("You WIN!!!!")
+        self.win.geometry("250x150+300+100")
+        self.win.attributes('-topmost', 1)
+        #self.canvas.create_oval(100, 100, 440, 440, outline="red", fill="green", width=2)
+        #self.canvas.create_text(239, 230, text="WIN", font=("Purisa", 86), fill="black")
+        b = Button(self.win, text="YOU WIN!!!", command =  self.WINdestroy())
+        b.pack(fill=X, relx=0.5, rely=0.5, anchor=CENTER)
+
+    def WINdestroy(self):
+        self.win.destroy()
 
     def  __initUI(self):
         self.text = Text(self)
@@ -167,4 +174,18 @@ class SudokuUI(Frame):
             self.draw_puzzle()
         if(self.mav!= None):
             self.__draw_mavoh()
+
+    def __drawExternalBoarder(self, left, up, right, down):
+        self.canvas.create_line(self, left, up, right, down, fill="black")
+
+    def __drawInternalBoarder(self, left, up, right, down):
+        self.canvas.create_line(self, left, up, right, down, fill="gray")
+
+    def __drawNumberinCell(self, i, j, text, fill):
+        self.canvas.create_text(MARGIN + SIDE / 2 + SIDE * j, MARGIN + SIDE / 2 + SIDE * i,
+                                text=text, tags="numbers", fill=fill)
+
+    _colorDictionery = {"incorrect":"red", "correct":"green", "predefined" :"black"}
+    def ConvertToColor(self, status):
+        return self._colorDictionery [status]
 
