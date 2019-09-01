@@ -45,7 +45,7 @@ class SudokuGame(object):
         for i in range(9):
             x=[]
             for j in range(9):
-                newCell = Cell( board[i][j].value, board[i][j].cellState)
+                newCell = Cell( board[i][j].value, board[i][j].cellState, set())
                 x.append(newCell)
             puzzle.append(x)
         print(puzzle)
@@ -82,7 +82,7 @@ class SudokuGame(object):
     
     def check_column(self,column, puzzle):
         for i in range(9):
-            column1 = list(map(lambda x: int(x[0]), puzzle[column]))
+            column1 = list(map(lambda x: int(x.value), puzzle[column]))
             if i+1 not in column1:
                 return False
         return True

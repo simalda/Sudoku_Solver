@@ -15,10 +15,11 @@ from Mavoh import Mavoh
 
 class SudokuUI(Frame):
 
-    def __init__(self, parent, game = None, mav = None):
+    def __init__(self, parent, game = None, mav = None, lang = 'English'):
         self.miniBoardNum = 0
         Frame.__init__(self, parent, bg = "beige")
         self.parent = parent
+        self.lang = lang
         if(game != None):
             self.SetGame(game)
         self.row, self.column = 0,0
@@ -54,13 +55,16 @@ class SudokuUI(Frame):
                 for j in range(9):
                     if puzzle[i][j].value == 0:
                         self.__drawNumberinCell(i, j, '', self.ConvertToColor('incorrect'))
+                        self.__drawHintinCell(i, j, puzzle[i][j].hint, self.ConvertToColor('hint'))
                     else:
                             self.__drawNumberinCell(i, j, puzzle[i][j].value, self.ConvertToColor( puzzle[i][j].cellState))
+                            self.__drawHintinCell(i, j, puzzle[i][j].hint, self.ConvertToColor('hint'))
         else:
             for i in range(9):
                 for j in range(9):
                     if puzzle.board[i][j].value == 0:
                         self.__drawNumberinCell(i, j, '',self.ConvertToColor('incorrect'))
+                        self. __drawHintinCell(i,j,puzzle[i][j].hint, self.ConvertToColor('hint'))
                     else:
                         self.__drawNumberinCell(i, j, puzzle.board[i][j].value, self.ConvertToColor('incorrect'))
 
@@ -104,20 +108,37 @@ class SudokuUI(Frame):
         self.canvas.create_rectangle(MARGIN+ (self.column-1) * SIDE,MARGIN+ (self.row-1) * SIDE,MARGIN+ self.column* SIDE, MARGIN+ self.row * SIDE, outline ="red", tags ="cursor")
 
     def __cell_clicked(self, event):
-        self.canvas.focus_set()
-        print(event.x, event.y)
-        self.row = math.ceil((event.y-MARGIN)/SIDE)
-        self.column = math.ceil((event.x - MARGIN) / SIDE)
+        self.__getCell(event)
         if MARGIN < event.x and event.x < MARGIN + SIDE * 9 and MARGIN < event.y and event.y < MARGIN + SIDE * 9 :
             self.__draw_cursor()
-            self.__draw_miniBoard(event)
+            self.__draw_miniBoard(event,0)
 
-    def __draw_miniBoard(self, event):
+    def __right_clicked(self, event):
+        self.__getCell(event)
+        self.__draw_miniBoard(event,1)
+
+    def __middle_clicked(self, event):
+        self.__getCell(event)
+        self.__draw_miniBoard(event, 2)
+
+    def __getCell(self, event):
+        self.canvas.focus_set()
+        self.row = math.ceil((event.y - MARGIN) / SIDE)
+        self.column = math.ceil((event.x - MARGIN) / SIDE)
+
+
+
+    def __draw_miniBoard(self, event, hint):
         if self.miniBoardNum  == 0:
             self.miniBoardNum += 1
-            def fuck(event):
+            def revCount(event):
                 self.miniBoardNum -=1
-            self.minBoard = MiniBoard(self.parent, callBack = self.SetNumber, onDestroy = fuck)
+            if hint ==1:
+                self.minBoard = MiniBoard(self.parent, callBack=self.SetNumber, onDestroy=revCount,number = 0 ,hint = 1)
+            elif hint ==2:
+                self.minBoard = MiniBoard(self.parent, callBack = self.DeleteNumber, onDestroy=revCount)
+            else:
+                self.minBoard = MiniBoard(self.parent, callBack = self.SetNumber, onDestroy = revCount)
 
     def __key_pressed(self, event):
         print(event)
@@ -131,27 +152,39 @@ class SudokuUI(Frame):
             if self.game.check_win(self.game.RealPuzzle):
                 self.__draw_victory()
 
-    def SetNumber(self, number):
-        #print(self.game.start_puzzle.board[self.row-1][self.column-1])
-        if  self.game.start_puzzleForGame[self.row-1][self.column-1].value == 0 :
-            self.game.RealPuzzle[self.row-1][self.column-1].value = number
-            self.game.RealPuzzle[self.row - 1][self.column - 1].cellState = "correct"
-            self.game.check_board()
-            self.game.check_move(self.row, self.column, number)
+    def DeleteNumber(self, number, hint):
+        if number in self.game.RealPuzzle[self.row - 1][self.column - 1].hint:
+            self.game.RealPuzzle[self.row - 1][self.column - 1].hint.remove(number)
+        if self.game.RealPuzzle[self.row - 1][self.column - 1].value == number:
+            self.game.RealPuzzle[self.row - 1][self.column - 1].value = 0
+        self.__draw_any_puzzle(self.game.RealPuzzle)
+
+    def SetNumber(self, number, hint):
+
+        if  self.game.start_puzzleForGame[self.row-1][self.column-1].value == 0:
+            if hint == 1:
+                self.game.RealPuzzle[self.row-1][self.column-1].hint.add(number)
+            else:
+                if number in self.game.RealPuzzle[self.row - 1][self.column - 1].hint:
+                    self.game.RealPuzzle[self.row - 1][self.column - 1].hint.remove(number)
+                self.game.RealPuzzle[self.row-1][self.column-1].value = number
+                self.game.RealPuzzle[self.row - 1][self.column - 1].cellState = "correct"
+                self.game.check_board()
+                self.game.check_move(self.row, self.column, number)
             self.__draw_any_puzzle(self.game.RealPuzzle)
-            print(self.game.check_win(self.game.RealPuzzle))
             if self.game.check_win(self.game.RealPuzzle):
                 self.__draw_victory()
 
     def __draw_victory(self):
         self.win = Toplevel(bg="beige")
         #self.win.wm_title("You WIN!!!!")
-        self.win.geometry("250x150+300+100")
+        self.win.geometry("250x150+500+300")
         self.win.attributes('-topmost', 1)
-        #self.canvas.create_oval(100, 100, 440, 440, outline="red", fill="green", width=2)
-        #self.canvas.create_text(239, 230, text="WIN", font=("Purisa", 86), fill="black")
-        b = Button(self.win, text="YOU WIN!!!", command =  self.WINdestroy())
-        b.pack(fill=X, relx=0.5, rely=0.5, anchor=CENTER)
+
+
+        self.b = Button(self.win, text=self.lang.WIN, command =  self.WINdestroy)
+        self.b.pack(anchor=CENTER, padx=0.5, pady=0.5, fill=X)
+        self.win.grab_set()
 
     def WINdestroy(self):
         self.win.destroy()
@@ -162,11 +195,13 @@ class SudokuUI(Frame):
         self.text.insert(END, "This is the first frame")
         self.canvas = Canvas(self, height = HEIGHT, width = WIDTH, bg ="beige")
         self.canvas.bind('<Button-1>', self.__cell_clicked)
+        self.canvas.bind('<Button-2>', self.__middle_clicked)
+        self.canvas.bind('<Button-3>', self.__right_clicked)
         self.canvas.focus_set()
         self.canvas.bind('<Key>', self.__key_pressed)
         self.canvas.pack()
-        self.button = Button(self, text="Clear answers ",command = self.clear_answers)
-        self.button2 = Button(self, text="Show Solution", command=self.show_solution)
+        self.button = Button(self, text=self.lang.ClearAnswers  ,command = self.clear_answers)
+        self.button2 = Button(self, text= self.lang.ShowSolution, command=self.show_solution)
         self.button.pack()
         self.button2.pack()
         self.__draw_grid()
@@ -185,7 +220,15 @@ class SudokuUI(Frame):
         self.canvas.create_text(MARGIN + SIDE / 2 + SIDE * j, MARGIN + SIDE / 2 + SIDE * i,
                                 text=text, tags="numbers", fill=fill)
 
-    _colorDictionery = {"incorrect":"red", "correct":"green", "predefined" :"black"}
+    def __drawHintinCell(self, i, j, hint, fill):
+        count = 0
+        for num in hint:
+            self.canvas.create_text(MARGIN  +6 +count*6 + SIDE * j, MARGIN +6  + SIDE * i,
+                                text=num, tags="numbers", fill=fill)
+            count = count+1
+
+
+    _colorDictionery = {"incorrect":"red", "correct":"green", "predefined" :"black", "hint":"blue"}
     def ConvertToColor(self, status):
         return self._colorDictionery [status]
 

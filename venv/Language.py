@@ -15,7 +15,8 @@ class Language(object):
         'ChoseYourLanguage' : 'Выбери язык',
         'SaveGame' : 'Сохранить игру',
         'ClearAnswers' : 'Очистить ответы',
-        'ShowSolution' : 'Показать решение'},
+        'ShowSolution' : 'Показать решение',
+        'WIN': 'Молодчик, мамгин!'},
                   "English": {'NewGame' : 'New Game',
         'File' : 'File',
         'Easy' :'Easy',
@@ -25,7 +26,8 @@ class Language(object):
         'ChoseYourLanguage' : 'Chose Your Language',
         'SaveGame' : 'Save Game',
         'ClearAnswers' :'Clear Answers',
-        'ShowSolution' :'Show Solution'}}
+        'ShowSolution' :'Show Solution',
+                            'WIN': "YOU WIN!!!"}}
 
         self.SetLang(lang)#!!!!
 

@@ -153,14 +153,14 @@ class Backtraking(object):
         if level =='Medium':
             self.SetLevel(4)
         if level =='Hard':
-            self.SetLevel(6)
+            self.SetLevel(7)
 
     def configBoard(self, board):#?????
         confiBoard=[]
         for i in range(9):
             x = []
             for j in range(9):
-                x.append(Cell(self.board[i][j], "predefined"))
+                x.append(Cell(self.board[i][j], "predefined",set()))
             confiBoard.append(x)
         return confiBoard
 

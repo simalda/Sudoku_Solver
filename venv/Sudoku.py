@@ -6,17 +6,20 @@ from fileManipulation import *
 from Backtraking import Backtraking
 from Mavoh import Mavoh
 from Language import *
+from center import center
 
 
 class App(object):
     def __init__(self):
         self.app = Tk()
-        self.sudUI = SudokuUI(self.app)
+        self.screen_width = self.app.winfo_screenwidth()
+        self.screen_height = self.app.winfo_screenheight()
         self.lang = Language('English')
+        self.sudUI = SudokuUI(self.app)
         #self.menu = self.SetupMenu()
         self.app.title("sudoku")
         self.app.iconbitmap(r'C:/Users/simal/repos/Sudoku_Solver/a.ico')
-        self.app.geometry("650x650+300+100")
+        self.app.geometry("650x650+300+50")
         self.popup_showinfo()
 
         #self.app.configure(menu=self.menu)
@@ -73,7 +76,7 @@ class App(object):
 
 
     def save(self):
-        self.fMan = fileManipulation()
+        self.fMan = fileManipulation(self.app)
         self.fMan.file_save2(self.sudUI)
 
     def Clear(self):
@@ -91,7 +94,8 @@ class App(object):
     def popup_showinfo(self):
         self.wind = Toplevel(bg = "beige")
         self.wind.wm_title("Sudoku lang")
-        self.wind.geometry("250x150+300+100")
+        self.wind.geometry("250x150+"+str(int(self.screen_width/2))+'+'+str(int(self.screen_height/2)))
+
         self.wind.attributes('-topmost', 1)
 
        # photo = PhotoImage(file = 'C:/Users/simal/repos/Sudoku_Solver/purple.ico')
@@ -119,6 +123,7 @@ class App(object):
     def setLanguage(self,langu):
         self.lang = Language(langu)
         self.menu = self.SetupMenu()
+        self.sudUI.lang = self.lang
         self.wind.destroy()
 
 

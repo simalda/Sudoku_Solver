@@ -4,13 +4,13 @@ import SudokuUI
 
 class MiniBoard(Toplevel):
     SIDE = SudokuUI.SIDE
-    def __init__(self, parent, callBack, onDestroy = None, number = 0):
+    def __init__(self, parent, callBack, onDestroy = None, number = 0, hint=0):
         Toplevel.__init__(self, parent)
         self.callBack = callBack
         self.onDestroy = onDestroy
         self.__draw_miniBoard()
         self.number = number
-
+        self.hint = hint
 
         def _delete_window():
             print("delete_window")
@@ -44,10 +44,11 @@ class MiniBoard(Toplevel):
         for i in range(3):
             for j in range(3):
                 self.canvas2.create_text(self.SIDE / 2 + self.SIDE * j, self.SIDE / 2 + self.SIDE * i, tags="numbers", fill="black", text = 3*i+j+1)
+        self.myFrame.grab_set()
 
     def click(self, event):
         number = self.__miniBoard_clicked(event)
-        self.callBack(number)
+        self.callBack(number, self.hint)
         self.destroy()
 
     def __miniBoard_clicked(self, event):

@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/venv/SudokuUI.py" line="117" />
+    <bookmark url="file://$PROJECT_DIR$/venv/SudokuUI.py" line="133" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0716d88-be14-41f9-93d0-fe8a4651d058" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Cell.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Language.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/tcl/purple.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/center.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Backtraking.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Backtraking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Cell.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Cell.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Language.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Language.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/MiniBoard.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/MiniBoard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Sudoku.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Sudoku.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/SudokuBoard.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/SudokuBoard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/SudokuGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/SudokuGame.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/SudokuUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/SudokuUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/fileManipulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/fileManipulation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/unitTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/unitTest.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,21 +27,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/SudokuGame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="476">
+              <caret line="47" column="79" selection-start-line="47" selection-start-column="79" selection-end-line="47" selection-end-column="79" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
-                <element signature="e#1521#1788#0" />
+                <element signature="e#585#868#0" />
+                <element signature="e#899#1063#0" />
+                <element signature="e#1100#1478#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/Cell.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -51,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/fileManipulation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+            <state relative-caret-position="493">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -70,18 +61,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/SudokuBoard.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/Backtraking.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2635">
@@ -93,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/venv/SudokuUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1751">
-              <caret line="112" column="40" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
+            <state relative-caret-position="231">
+              <caret line="202" column="64" selection-start-line="202" selection-start-column="64" selection-end-line="202" selection-end-column="64" />
               <folding>
                 <element signature="e#62#83#0" expanded="true" />
               </folding>
@@ -108,11 +87,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/Language.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="442">
+              <caret line="28" column="21" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="21" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <marker date="1550410108656" expanded="true" signature="117:118" ph="..." />
+                <marker date="1554474207537" expanded="true" signature="117:118" ph="..." />
               </folding>
             </state>
           </provider>
@@ -121,26 +100,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/MiniBoard.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="748">
+              <caret line="46" column="9" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="31" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <marker date="1538937499371" expanded="true" signature="1618:1622" ph="..." />
+                <marker date="1554551805309" expanded="true" signature="1682:1686" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/Sudoku.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="55" />
+            <state relative-caret-position="153">
+              <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <marker date="1550768691612" expanded="true" signature="2582:2667" ph="..." />
-                <marker date="1550768691612" expanded="true" signature="2729:2734" ph="..." />
+                <marker date="1554554586434" expanded="true" signature="2723:2808" ph="..." />
+                <marker date="1554554586434" expanded="true" signature="2870:2875" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/center.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -178,6 +166,12 @@
       <find>App</find>
       <find>[0]</find>
       <find>[1]</find>
+      <find>SetNumber</find>
+      <find>CreateGame</find>
+      <find>__key_pressed</find>
+      <find>Cell</find>
+      <find>EnableMenu</find>
+      <find>__cell_clicked</find>
     </findStrings>
     <replaceStrings>
       <replace>puzzelToCheck</replace>
@@ -201,30 +195,32 @@
         <option value="$PROJECT_DIR$/venv/WinBoard" />
         <option value="$PROJECT_DIR$/venv/tcl/fileManipulation.py" />
         <option value="$PROJECT_DIR$/venv/Mavoh.py" />
-        <option value="$PROJECT_DIR$/venv/MiniBoard.py" />
-        <option value="$PROJECT_DIR$/venv/Language.py" />
         <option value="$PROJECT_DIR$/venv/unitTest.py" />
         <option value="$PROJECT_DIR$/venv/tcl/Cell.py" />
-        <option value="$PROJECT_DIR$/venv/SudokuUI.py" />
-        <option value="$PROJECT_DIR$/venv/Cell.py" />
-        <option value="$PROJECT_DIR$/venv/Backtraking.py" />
+        <option value="$PROJECT_DIR$/venv/Language.py" />
         <option value="$PROJECT_DIR$/venv/SudokuBoard.py" />
+        <option value="$PROJECT_DIR$/venv/Cell.py" />
         <option value="$PROJECT_DIR$/venv/SudokuGame.py" />
-        <option value="$PROJECT_DIR$/venv/Sudoku.py" />
         <option value="$PROJECT_DIR$/venv/fileManipulation.py" />
+        <option value="$PROJECT_DIR$/venv/Backtraking.py" />
+        <option value="$PROJECT_DIR$/venv/MiniBoard.py" />
+        <option value="$PROJECT_DIR$/venv/center.py" />
+        <option value="$PROJECT_DIR$/venv/Sudoku.py" />
+        <option value="$PROJECT_DIR$/venv/SudokuUI.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="width" value="3230" />
-    <option name="height" value="1830" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="443" />
+    <option name="y" value="-23" />
+    <option name="width" value="782" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -241,10 +237,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/Lesson9" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -417,20 +414,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1615" height="915" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19062698" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17782739" />
       <window_info id="Structure" order="1" weight="0.1264489" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29681528" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.48317632" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3617021" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.44844517" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32974428" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.23057325" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.22804533" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32827735" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -438,18 +436,18 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24951768" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09062171" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15848215" />
       <window_info id="Structure" order="1" weight="0.1264489" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.20476706" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.43661973" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31423897" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.48281506" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32974428" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32827735" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.2304066" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32827735" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -462,7 +460,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/venv/SudokuUI.py</url>
-          <line>86</line>
+          <line>90</line>
           <option name="timeStamp" value="207" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -471,48 +469,23 @@
           <option name="timeStamp" value="295" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/venv/SudokuUI.py</url>
-          <line>124</line>
-          <option name="timeStamp" value="302" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/venv/Sudoku.py</url>
-          <line>20</line>
+          <line>23</line>
           <option name="timeStamp" value="316" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/venv/Sudoku.py</url>
-          <line>76</line>
+          <line>79</line>
           <option name="timeStamp" value="323" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/venv/Sudoku.py</url>
-          <line>57</line>
+          <line>60</line>
           <option name="timeStamp" value="324" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/venv/fileManipulation.py</url>
-          <line>44</line>
-          <option name="timeStamp" value="345" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/venv/SudokuUI.py</url>
-          <line>33</line>
-          <option name="timeStamp" value="351" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/venv/fileManipulation.py</url>
-          <line>45</line>
-          <option name="timeStamp" value="352" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/venv/SudokuUI.py</url>
-          <line>50</line>
-          <option name="timeStamp" value="355" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/venv/SudokuUI.py</url>
-          <line>78</line>
+          <line>82</line>
           <option name="timeStamp" value="360" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -521,34 +494,34 @@
           <option name="timeStamp" value="363" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/venv/MiniBoard.py</url>
-          <line>48</line>
-          <option name="timeStamp" value="364" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/venv/SudokuGame.py</url>
-          <line>11</line>
-          <option name="timeStamp" value="366" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/venv/SudokuGame.py</url>
-          <line>9</line>
-          <option name="timeStamp" value="367" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/venv/fileManipulation.py</url>
-          <line>125</line>
+          <line>118</line>
           <option name="timeStamp" value="370" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/venv/fileManipulation.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="371" />
+          <line>46</line>
+          <option name="timeStamp" value="372" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/venv/SudokuUI.py</url>
+          <line>173</line>
+          <option name="timeStamp" value="389" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/venv/SudokuUI.py</url>
+          <line>66</line>
+          <option name="timeStamp" value="391" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/venv/fileManipulation.py</url>
-          <line>53</line>
-          <option name="timeStamp" value="372" />
+          <line>61</line>
+          <option name="timeStamp" value="392" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/venv/SudokuUI.py</url>
+          <line>180</line>
+          <option name="timeStamp" value="394" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -570,11 +543,23 @@
         <watch expression="self.game.start_puzzleForGame[self.row-1][self.column-1]" language="Python" />
         <watch expression="boardPaz[i][j]" language="Python" />
         <watch expression="app.game.RealPuzzle[i][j].value" language="Python" />
+        <watch expression="b" language="Python" />
+        <watch expression="hint" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>hint</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>b</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>self.game.start_puzzleForGame[self.row-1][self.column-1].value</expression-string>
         <language-id>Python</language-id>
@@ -612,16 +597,6 @@
       </expression>
       <expression>
         <expression-string>self.row-1</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>type(boardPaz)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>puzzle</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -749,13 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/tkinter/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="1698" selection-start-line="1698" selection-end-line="1698" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/PycharmProjects/Sudoku/venv/SudokuUI.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-17">
@@ -770,28 +738,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/SudokuGame.py">
+    <entry file="file://$PROJECT_DIR$/venv/Cell.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-            <element signature="e#1521#1788#0" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Cell.py">
+    <entry file="file://$PROJECT_DIR$/venv/SudokuBoard.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="17">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/tkinter/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="1698" selection-start-line="1698" selection-end-line="1698" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/SudokuGame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="47" column="79" selection-start-line="47" selection-start-column="79" selection-end-line="47" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+            <element signature="e#585#868#0" />
+            <element signature="e#899#1063#0" />
+            <element signature="e#1100#1478#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/fileManipulation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+        <state relative-caret-position="493">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
@@ -805,16 +789,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/SudokuBoard.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Backtraking.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2635">
@@ -825,46 +799,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/SudokuUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1751">
-          <caret line="112" column="40" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
-          <folding>
-            <element signature="e#62#83#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Language.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="442">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="21" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <marker date="1550410108656" expanded="true" signature="117:118" ph="..." />
+            <marker date="1554474207537" expanded="true" signature="117:118" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/MiniBoard.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="748">
+          <caret line="46" column="9" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="31" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <marker date="1538937499371" expanded="true" signature="1618:1622" ph="..." />
+            <marker date="1554551805309" expanded="true" signature="1682:1686" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/Sudoku.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="55" />
+        <state relative-caret-position="153">
+          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <marker date="1550768691612" expanded="true" signature="2582:2667" ph="..." />
-            <marker date="1550768691612" expanded="true" signature="2729:2734" ph="..." />
+            <marker date="1554554586434" expanded="true" signature="2723:2808" ph="..." />
+            <marker date="1554554586434" expanded="true" signature="2870:2875" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/center.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/SudokuUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="202" column="64" selection-start-line="202" selection-start-column="64" selection-end-line="202" selection-end-column="64" />
+          <folding>
+            <element signature="e#62#83#0" expanded="true" />
           </folding>
         </state>
       </provider>

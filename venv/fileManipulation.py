@@ -12,42 +12,35 @@ class fileManipulation(object):
         self.app =app
 
 
-    def new_game(self,app):
-        game1 = SudokuGame("SudokuBoard.txt")
-        return game1
-
-
-        #sudUI = SudokuUI(app ,game1)
-        #sudUI.__init__(app, game1)
-        
-        
     def file_load(self, app):
+        f =   askopenfile(mode="r")
         try:
-            with askopenfile(mode="r") as f:
+            if f != False:
                 lines = f.read().splitlines()
+                realPazGame = self.CreatePuz(lines, 0, 8)
+                solPazGame = self.CreatePuz(lines, 10, 18)
+                startPaz = []
+                for i in range(9):
+                    x = []
+                    for j in range(9):
+                        if realPazGame[i][j].cellState != 'predefined':
+                            newCell = Cell(0, 'predefined', '')
+                            x.append(newCell)
+                        else:
+                            newCell = Cell(realPazGame[i][j].value, realPazGame[i][j].cellState, set())
+                            x.append(newCell)
+                    startPaz.append(x)
 
-            realPazGame = self.CreatePuz(lines,0, 8)
-            solPazGame = self.CreatePuz(lines,10, 18)
+                gamee = SudokuGame('', '', realPazGame, solPazGame, startPaz, startPaz)
+                app.SetGame(gamee)
 
 
-            startPaz=[]
-            for i in range(9):
-                x=[]
-                for j in range(9):
-                    if realPazGame[i][j].cellState != 'predefined':
-                        newCell = Cell(0,'predefined')
-                        x.append(newCell)
-                    else:
-                        newCell = Cell(realPazGame[i][j].value ,realPazGame[i][j].cellState)
-                        x.append(newCell)
-                startPaz.append(x)
 
-            gamee = SudokuGame('','',realPazGame,solPazGame, startPaz,startPaz)
-            app.SetGame(gamee)
         except:
             self.__draw_ex(app)
         finally:
-            f.close()
+            if f in locals():
+                f.close()
 
 
     def __draw_ex(self, ap):
@@ -75,7 +68,7 @@ class fileManipulation(object):
         for i in range(9):
             x = []
             for j in range(9):
-                newCell = Cell(boardList[i][j][0], boardList[i][j][1])
+                newCell = Cell(boardList[i][j][0], boardList[i][j][1], set())
                 x.append(newCell)
             puzzle.append(x)
         return puzzle
